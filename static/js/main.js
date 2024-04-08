@@ -7,7 +7,7 @@ async function getData(place){
 
     time = data.datetime
 
-    document.getElementById("time").innerText=`${place}'s time = ${time} ${data.timezone_abbreviation}`
+    document.getElementById("timeCont").innerText=`${place}'s time = ${time} ${data.timezone_abbreviation}`
 }
 
 document.querySelectorAll(".allPaths").forEach(e => {
@@ -36,7 +36,7 @@ document.querySelectorAll(".allPaths").forEach(e => {
     })
 
     e.addEventListener("click",function(){
-        getUser(e.id)
+        getData(e.id)
     })
 
 })
